@@ -1,0 +1,65 @@
+<table align="center" cellpadding="7" width="100%" border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th colspan="10">Daftar Pegawai</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr bgcolor="tomato">
+                <th>No</th>
+                <th>Nama</th>
+                <th>Jabatan</th>
+                <th>Agama</th>
+                <th>Gaji Pokok</th>
+                <th>Tunjangan Jabatan</th>
+                <th>Tunjangan Kesehatan</th>
+                <th>Gaji Kotor</th>
+                <th>Zakat Profesi</th>
+                <th>Take Home Pay</th>
+            </tr>
+            <script language="javascript">
+                let no, tunjanganJabatan, tunjanganKesehatan, gajiKotor, warna, takeHomePay, agama;
+                let gapok = 0;
+                
+                for (no = 1; no<=100;no++){
+                    if (no >= 1 && no <= 25) jabatan = "Manager";
+                    else if (no >= 26 && no <= 50) jabatan = "Asisten Manager";
+                    else if (no >= 51 && no <= 75) jabatan = "Supervisor";
+                    else if (no >= 76 && no <= 100) jabatan = "Staff";
+
+                    switch (jabatan){
+                        case "Manager" : gapok = 15000000; break
+                        case "Asisten Manager" : gapok = 10000000; break
+                        case "Supervisor" : gapok = 7000000; break
+                        case "Staff" : gapok = 4000000; break
+                        default : gapok = 0;
+                    }
+                    tunjanganJabatan = 0.2 *gapok;
+                    tunjanganKesehatan = 0.1 *gapok;
+                    gajiKotor = tunjanganJabatan + tunjanganKesehatan + gapok;
+                    agama = (no % 2 == 0) ? "Non Muslim" : "Muslim";
+                    warna = (no % 2 == 0) ? 'aqua' :'yellow';
+
+                    if(agama == "Muslim" && gajiKotor >= 7000000) zakatProfesi = 0.025*gajiKotor;
+                    else zakatProfesi = 0;
+
+                    takeHomePay = gajiKotor-zakatProfesi;
+                    document.write(`
+                    <tr bgcolor="${warna}">
+                        <td>${no}</td>
+                        <td>Pegawai${no}</td>
+                        <td>${jabatan}</td>
+                        <td>${agama}</td>
+                        <td>Rp ${gapok}</td>
+                        <td>Rp ${tunjanganJabatan}</td>
+                        <td>Rp ${tunjanganKesehatan}</td>
+                        <td>Rp ${gajiKotor}</td>
+                        <td>Rp ${zakatProfesi}</td>
+                        <td>Rp ${takeHomePay}</td>
+                    </tr>`);
+                    }
+                </script>
+        </tbody>
+        </table>
+
+</script>
