@@ -54,7 +54,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseTwo"
           >
-            Burung
+            Suara Burung
           </button>
         </h2>
         <div
@@ -63,7 +63,7 @@
           aria-labelledby="flush-headingTwo"
           data-bs-parent="#accordionFlushExample"
         >
-          <div class="accordion-body">
+          <div class="accordion-body burung">
             <div class="card" style="width: 18rem">
                 <img
                   src="images/burung.jpg"
@@ -85,7 +85,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseThree"
           >
-            Kambing
+            Suara Kambing
           </button>
         </h2>
         <div
@@ -94,10 +94,10 @@
           aria-labelledby="flush-headingThree"
           data-bs-parent="#accordionFlushExample"
         >
-          <div class="accordion-body">
+          <div class="accordion-body kambing">
             <div class="card" style="width: 18rem">
                 <img
-                  src="images/kambing.jpg"
+                  src="images/kambing.jfif"
                   class="card-img-top kambing"/>
               <div class="card-body">
                   <p class="card-text">Kambing</p>
@@ -116,20 +116,13 @@
                     'autoplay': "autoplay"
                 }).appendTo("div");
             });
-
-            $("div.burung").css("background-color","orange");
             $("div.burung").click(function () {
-                $(this).css({
-                    background: "url(images/burung.jpg)"
-                });
                 $("<audio></audio>").attr({
                     'src': "audio/burung.mp3",
                     'volume': 0.4,
                     'autoplay': "autoplay"
                 }).appendTo("div");
             });
-
-            $("div.kambing").css("background-color","orange");
             $("div.kambing").click(function () {
                 $(this).css({
                     background: "url(images/kambing.jpg)"
@@ -140,30 +133,6 @@
                     'autoplay': "autoplay"
                 }).appendTo("div");
             });      
-
-            $("div.kucing").css("background-color","orange");
-            $("div.kucing").click(function () {
-                $(this).css({
-                    background: "url(images/kucing.jpg)"
-                });
-                $("<audio></audio>").attr({
-                    'src': "audio/kucing.mp3",
-                    'volume': 0.4,
-                    'autoplay': "autoplay"
-                }).appendTo("div");
-            });
-
-            $("div.sapi").css("background-color","orange");
-            $("div.sapi").click(function () {
-                $(this).css({
-                    background: "url(images/sapi.jpg)"
-                });
-                $("<audio></audio>").attr({
-                    'src': "audio/sapi.mp3",
-                    'volume': 0.4,
-                    'autoplay': "autoplay"
-                }).appendTo("div");
-            });
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
