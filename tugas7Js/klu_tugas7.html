@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suara Hewan</title>
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+            $("div.ayam").click(function () {
+                $(this).css({
+                    background: "url('images/ayam.jpg')"
+                });
+                $("<audio></audio>").attr({
+                    'src': "audio/ayam.mp3",
+                    'volume': 0.4,
+                    'autoplay': "autoplay"
+                }).appendTo("div");
+            });
+
+            $("div.burung").css("background-color","orange");
+            $("div.burung").click(function () {
+                $(this).css({
+                    background: "url(images/burung.jpg)"
+                });
+                $("<audio></audio>").attr({
+                    'src': "audio/burung.mp3",
+                    'volume': 0.4,
+                    'autoplay': "autoplay"
+                }).appendTo("div");
+            });
+
+            $("div.kambing").css("background-color","orange");
+            $("div.kambing").click(function () {
+                $(this).css({
+                    background: "url(images/kambing.jpg)"
+                });
+                $("<audio></audio>").attr({
+                    'src': "audio/kambing.mp3",
+                    'volume': 0.9,
+                    'autoplay': "autoplay"
+                }).appendTo("div");
+            });      
+
+            $("div.kucing").css("background-color","orange");
+            $("div.kucing").click(function () {
+                $(this).css({
+                    background: "url(images/kucing.jpg)"
+                });
+                $("<audio></audio>").attr({
+                    'src': "audio/kucing.mp3",
+                    'volume': 0.4,
+                    'autoplay': "autoplay"
+                }).appendTo("div");
+            });
+
+            $("div.sapi").css("background-color","orange");
+            $("div.sapi").click(function () {
+                $(this).css({
+                    background: "url(images/sapi.jpg)"
+                });
+                $("<audio></audio>").attr({
+                    'src': "audio/sapi.mp3",
+                    'volume': 0.4,
+                    'autoplay': "autoplay"
+                }).appendTo("div");
+            });
+    </script>
+</head>
+
+<body>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Ayam
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="ayam"></div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Burung
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="burung"></div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Kambing
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="kambing"></div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Kucing
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="kambing"></div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Sapi
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="kambing"></div>
+            </div>
+          </div>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</body>
+
+</html>
